@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Blessing Wall of #{blessingWallBean.brochure} </title>
+    </h:head>
+    <h:body>
+        <h2>Blessings for #{blessingWallBean.brochure}</h2>
+        <p:separator/>
+        <h:form>
+            <p:messages/>
+            <p:panel header="Release Blessing" style="margin-bottom:10px; width:60%"> 
+                <p:inputTextarea value="#{blessingWallBean.newBlessing}" rows="5" cols="70" />
+                <br/>
+
+                <h:panelGrid columns="2" cellpadding="5">  
+                    <p:selectOneMenu id="visibility" value="#{blessingWallBean.newBlessingvis}">  
+                        <f:selectItem itemLabel="Select visibility" itemValue="" />  
+                        <f:selectItems itemLabel="Visible to all" itemValue="false" />
+                        <f:selectItems itemLabel="Visible to brochure only" itemValue="true" />
+                    </p:selectOneMenu>  
+                    <p:commandButton value="Submit" actionListener="#{blessingWallBean.saveBlessing}" styleClass="ui-priority-primary"/> 
+                </h:panelGrid>  
+            </p:panel>
+            <p:accordionPanel value="#{blessingWallBean.blessings}" var="blessing" multiple="true"> 
+                <p:tab>
+                  <h:panelGrid columns="2" cellpadding="10">  
+                        <p:graphicImage value="/img/user/#{blessing.userName}.jpg" />  
+
+                        <h:panelGrid columns="1" cellpadding="10">  
+                            <h:outputText value="#{blessing.userName}" style="font-weight: bold"/>  
+                            <h:outputText value="#{blessing.blessing}" style="font-weight: bold"/>  
+                            <p:separator/>
+                            <h:outputText value="发表于 #{blessing.releaseTime}"/>
+                        </h:panelGrid>  
+
+                    </h:panelGrid> 
+                </p:tab>
+            </p:accordionPanel>  
+        </h:form>  
+    </h:body>
+</html>
+

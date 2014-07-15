@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xml:lang="utf-8" lang="utf-8"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+   
+    <h:body>
+        <div id="header">
+            <div id="header_left" style="float: left">
+                <h1>
+                    <h:outputLink value="">
+                        <h:outputText value="MOMA #{brochure.brochureName}"/>
+                    </h:outputLink>
+                </h1>
+                    <div class="description">
+                        <h:outputText value="Make our memories alive!#{brochure.brochureDescription}"/>
+                    </div>
+            </div>
+            <div id="header_right" style="float:right">
+                <div id="subscribe">
+                    <a title="userlogo" href="">
+                        <img id="userlogo" alt="userName" src="./img/portrait.png" width="35%"/>
+                    </a>
+                </div>
+            </div>
+            <div id="header_navi_right" style="float: right">
+                <h:outputLink value="">
+                    <h:outputText value="首页"/>
+                </h:outputLink>
+                <h:outputText value="|"/>
+                 <h:outputLink value="">
+                    <h:outputText value="搜索"/>
+                </h:outputLink>
+                <h:outputText value="|"/>
+                 <h:outputLink value="">
+                    <h:outputText value="资料"/>
+                </h:outputLink>
+                
+            </div>
+            <div style="clear:both"/>
+        </div>
+           
+           
+    </h:body>
+</html>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="moma_db"/>
+  <table-filter match-name="group_member"/>
+  <table-filter match-name="blessing"/>
+  <table-filter match-name="photo"/>
+  <table-filter match-name="user_brochure_relationship"/>
+  <table-filter match-name="brochure"/>
+  <table-filter match-name="friends"/>
+  <table-filter match-name="video"/>
+  <table-filter match-name="diary"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="user_follow_brochure"/>
+  <table-filter match-name="comment"/>
+  <table-filter match-name="group_owner"/>
+</hibernate-reverse-engineering>

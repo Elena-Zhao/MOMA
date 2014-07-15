@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <!--			<div class="row">		
+				<div class=" pull-right">
+				<div class="span2">
+                                    <h:outputLink value="#">
+                                         <h:graphicImage url="./img/portrait.png" />
+                                    </h:outputLink><br/>
+					
+                                    <a href="#editMyInfo" role="button" class="btn" data-toggle="modal">编辑个人资料</a>
+                                  
+					<div id="editMyInfo" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  						<div class="modal-header">
+   							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    						<h3 id="myModalLabel">个人资料</h3>
+  						</div>
+  						<div class="modal-body">
+                                          
+     <h:form>  
+  
+    <p:growl id="growl" sticky="true" showDetail="true"/>  
+  
+    <p:wizard widgetVar="wiz" flowListener="<#{personalSpaceBean.onFlowProcess}">  
+      
+        <p:tab id="personal" title="个人">  
+  
+            <p:panel header="个人基本信息">  
+              
+                <h:messages errorClass="error"/>  
+                  
+                <h:panelGrid columns="2" columnClasses="label, value" styleClass="grid">  
+                
+                    <h:outputText value="真实姓名: *" />  
+                    <p:inputText required="true" label="userRealName"  
+                            value="#{personalSpaceBean.user.userRealName}" />  
+                    
+                    <h:outputText value="邮箱: *" />  
+                    <p:autoComplete label="userEmail" value="#{personalSpaceBean.user.userEmail}" effect="blind"
+                                            completeMethod="#{autoCompleteBean.complete}"/>
+              
+                    <h:outputText value="Skip to last: " />  
+                    <h:selectBooleanCheckbox value="#{personalSpaceBean.skip}" />  
+                </h:panelGrid>  
+            </p:panel>  
+        </p:tab>  
+              
+        <p:tab id="address" title="地址">  
+            <p:panel header="地址信息">  
+              
+                <h:messages errorClass="error"/>  
+                  
+                <h:panelGrid columns="2" columnClasses="label, value">  
+                    <h:outputText value="街道: " />  
+                    <p:inputText value="#{personalSpaceBean.user.adressFirstLine}" />  
+                      
+                    <h:outputText value="城市: " />  
+                    <p:inputText value="#{personalSpaceBean.user.adressSecondLine}" />  
+                      
+                      <h:outputText value="国家"/>
+                           <p:selectOneMenu value="#{personalSpaceBean.user.adressCountry}">
+                                仅作显示参考：找现成的数据库
+                               <f:selectItem itemLabel="China" itemValue="China" />  
+                                <f:selectItem itemLabel="Japan" itemValue="Japan" />  
+                               <f:selectItem itemLabel="Britain" itemValue="Britain" />  
+                                <f:selectItem itemLabel="the United States" itemValue="the United States" />  
+                           </p:selectOneMenu>
+                            
+                          <h:outputText value="省份"/>
+                            <p:selectOneMenu value="#{modifyInfoBean.user.adressProvince}">
+                               仅作显示参考：找现成的数据库
+                                <f:selectItem itemLabel="Shanghai" itemValue="Shanghai" />  
+                                <f:selectItem itemLabel="Beijing" itemValue="Beijing" />  
+                               <f:selectItem itemLabel="Shanxi" itemValue="Shanxi" />  
+                                <f:selectItem itemLabel="Liaoning" itemValue="Liaoning" />  
+                           </p:selectOneMenu>
+                 
+                     <h:outputText value="Skip to last: " />  
+                     <h:selectBooleanCheckbox value="#{personalSpaceBean.skip}" />  
+                </h:panelGrid>  
+            </p:panel>  
+        </p:tab>  
+              
+        <p:tab id="contact" title="联系">  
+            <p:panel header="联系方式">  
+                  
+                <h:messages errorClass="error"/>  
+              
+                <h:panelGrid columns="2" columnClasses="label, value">  
+                 
+                      
+                    <h:outputText value="电话: " />  
+                    <p:inputText value="#{personalSpaceBean.user.phoneNumber}"/>  
+                      
+                    <h:outputText value="qq号: " />  
+                    <p:inputText value="#{personalSpaceBean.user.qqNumber}"/>  
+                    
+                </h:panelGrid>  
+            </p:panel>  
+        </p:tab>  
+              
+        <p:tab id="confirm" title="确认">  
+            <p:panel header="确认信息">  
+              
+                <h:panelGrid id="confirmation" columns="6">  
+                    <h:outputText value="真实姓名: " />  
+                    <h:outputText styleClass="outputLabel"  
+                                value="#{personalSpaceBean.user.userRealName}" />  
+                      
+                    
+                     <h:outputText value="邮箱: " />    
+                     <h:outputText styleClass="outputLabel"  
+                                value="#{personalSpaceBean.user.userEmail}" />  
+                   
+                   <h:outputText value="地址1: " />  
+                    <h:outputText styleClass="outputLabel"  
+                                value="#{personalSpaceBean.user.adressFirstLine}" />  
+                      
+                    <h:outputText value="地址2: " />  
+                    <h:outputText styleClass="outputLabel"  
+                                value="#{personalSpaceBean.user.adressSecondLine}" />  
+                      
+                    <h:outputText value="国家: " />  
+                    <h:outputText styleClass="outputLabel"  
+                                value="#{personalSpaceBean.user.adressCountry}" />  
+                      
+                    <h:outputText value="省份: " />  
+                    <h:outputText styleClass="outputLabel"  
+                                value="#{personalSpaceBean.user.adressProvince}" /> 
+                    
+                    
+                    <h:outputText value="电话:" />  
+                    <h:outputText styleClass="outputLabel"  
+                                value="#{personalSpaceBean.user.phoneNumber}"/>  
+                      
+                    <h:outputText value="qq号: " />  
+                    <h:outputText styleClass="outputLabel"  
+                                value="#{personalSpaceBean.user.qqNumber}" />  
+                      
+                    <h:outputText />  
+                    <h:outputText />  
+                </h:panelGrid>  
+                  
+                <p:commandButton value="保存修改" update="growl"   
+                                 actionListener="#{personalSpaceBean.modifyPersonalInfo}"/>  
+              
+            </p:panel>  
+        </p:tab>  
+    </p:wizard>        
+</h:form>  
+  						</div>
+  						<div class="modal-footer">
+    						<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    						<button class="btn btn-primary">Save changes</button> 
+  						</div>
+					</div>
+				</div>
+				<div class="span3 text-left badge badge-warning">
+					<h4>
+					姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名<br/>
+					性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别<br/>
+					年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄<br/>
+					邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱<br />
+					地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址<br />
+					联系方式<br/>
+					
+					</h4>
+				</div>
+				<div class="span3">
+			
+				</div>
+				</div>
+			</div>-->
+    </body>
+</html>

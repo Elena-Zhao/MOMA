@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-6-18 22:31:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.entity.moma.Diary" table="diary" catalog="moma_db">
+        <id name="diaryId" type="java.lang.Integer">
+            <column name="diary_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="com.entity.moma.User" fetch="select">
+            <column name="diary_user_fk" />
+        </many-to-one>
+        <many-to-one name="brochure" class="com.entity.moma.Brochure" fetch="select">
+            <column name="diary_brochure_fk" not-null="true" />
+        </many-to-one>
+        <property name="diaryStartTime" type="timestamp">
+            <column name="diary_start_time" length="19" not-null="true" />
+        </property>
+        <property name="diaryUrl" type="string">
+            <column name="diary_url" not-null="true" unique="true" />
+        </property>
+        <property name="diaryTitle" type="string">
+            <column name="diary_title" length="32" not-null="true" />
+        </property>
+        <property name="diaryModifiedTime" type="timestamp">
+            <column name="diary_modified_time" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

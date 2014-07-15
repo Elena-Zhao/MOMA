@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <f:view>
+        <h:head>
+            <title>Friends</title>
+            <link rel="stylesheet" type="text/css" href="./css/generalStyle.css" media="all" />
+        </h:head>
+        <h:body>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <h:outputLink styleClass="brand" value="#">
+                            <h:outputText value="MOMA" />
+                        </h:outputLink>
+                        <ul class="nav">
+                            <li>
+                                <h:outputLink value="userHomePage.xhtml">
+                                    <h:outputText value="首页" />
+                                </h:outputLink>
+                            </li>
+                            <li>
+                                <h:outputLink value="PersonalSpace.xhtml">
+                                    <h:outputText value="我的纪念册" />
+                                </h:outputLink>
+                            </li>
+                            <li class="active">
+                                <h:outputLink value="Friends.xhtml">
+                                    <h:outputText value="我的好友" />
+                                </h:outputLink>
+                            </li>
+
+                        </ul>
+                        <h:form styleClass="navbar-search pull-right" >
+                            <p:inputText id="search" styleClass="search-query" value="#{friendsBean.searchName}" />
+                            <p:watermark for="search" value="搜索好友/纪念册" />
+                            <h:commandButton styleClass="pp" id="searchSubmit" action="#{friendsBean.doSearch}" />
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="span4">
+                <div class="container hero-unit span2 pull-left">
+
+                    <div class="text-success">
+
+                        <h:dataTable value="#{friendsBean.groupList}" var="groupList" >
+                            <f:facet name="header">
+                                <h:outputText styleClass="label label-warning" value="好友分组" />
+                            </f:facet>
+                            <h:column>
+                                <div class="text-success">
+                                    <h:form>
+                                        <h:commandLink value="#{groupList.groupName}" action="#{friendsBean.doFilter}"  >
+                                            <f:param name="group_id" value="#{groupList.groupId}" />
+                                        </h:commandLink><br/>
+                                    </h:form>
+                                </div>
+
+                            </h:column>
+
+
+                        </h:dataTable>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="span11">
+                <div class="row lead text-left"> 
+
+                </div>
+                <br />
+                <div class="row">
+
+                    <p:panel  header="好友列表" style="display:inline-block; alignment-baseline: central; width: 60%; height: 600px;">
+                        <p:panelGrid columns="5">
+                            <c:forEach items ="#{friendsBean.userFriendList}" var="friend">
+                               <h:graphicImage value="#{friend.userPortraitUrl}" width="100" />  
+                                <h:outputText value="#{friend.userName}" />
+                                <h:form>
+                                    <h:outputLink styleClass="btn btn-success btn-mini" value="userHomePage.xhtml">
+                                        <h:outputText value="进入主页"/>
+                                        <f:param name="friendName" value="#{friend.userName}"></f:param>
+                                    </h:outputLink>
+                                </h:form>
+                                <h:form>
+                                    <h:commandLink styleClass="btn btn-danger btn-mini" actionListener="#{friendsBean.removeFriend}"  >
+                                        <h:outputText value="解除关系"/>
+                                        <f:attribute name="friendName" value="#{friend.userName}"></f:attribute>
+                                    </h:commandLink>
+                                </h:form>
+
+                                <h:form>
+                                    <h:commandLink styleClass="btn btn-success btn-mini" value="加入分组" action="#{addGroupBean.jumpToAdd}" >
+                                        <f:param name="friendUserName" value="#{friend.userName}" />
+                                    </h:commandLink>
+                                </h:form> 
+
+                            </c:forEach>
+                        </p:panelGrid>
+                    </p:panel>
+
+                </div>
+            </div>
+
+            <script src="http://code.jquery.com/jquery.js"></script>
+            <script src="bootstrap.js"></script>
+        </h:body>
+    </f:view>
+</html>
+
+
+

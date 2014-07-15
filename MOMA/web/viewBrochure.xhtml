@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <head>
+        <meta charset="utf-8" />
+        <title>MOMA | #{viewBrochureBean.brochure.brochureName}</title>
+
+        <!-- Our Stylesheet -->
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            function loading(){
+                document.getElementById("#{memmory.memoryId}").innerHTML= "new test";
+            };
+        </script>
+    </head>
+
+    <body onload="loading();">
+
+        <div id="magazine" class="centerStart">
+            <div id="page1" class="page">
+                <div class="img1">
+
+                    <!-- The pageNum span can be either on the left,
+                            or the right if the page is odd/even. -->
+
+                    <span class="pageNum right">1 // 32</span>
+                    <img src="#{viewBrochureBean.brochure.brochureImageUrl}" alt="MOMA | Cover" />
+                </div>
+            </div>   
+            
+
+<!--            <ui:repeat var="memmory" value="#{viewBrochureBean.memory}" varStatus="status">
+                
+                <div id="content" class="page">
+                    <div class="img">
+                        
+                        <h:outputText value="#{viewBrochureBean.memory.memoryUrl}" style="color: white;"/>
+                        <image src="#{viewBrochureBean.memory.memoryUrl}" alt="MOMA"/>
+                    </div>
+                </div>
+            </ui:repeat>-->
+            
+            <c:forEach items="#{viewBrochureBean.memoryList}" var="memmory">
+                <div id="content" class="page">
+                    <div class="img">
+
+                        <!--<p:panel>-->  
+                            <h:outputText value=" 编辑时间：#{memmory.memoryDate}"/>
+                            <br /><br />
+                            <c:if test="#{memmory.memoryType == 'Diary'}">
+<!--                                <p id="#{memmory.memoryId}">
+                                    test
+                                </p>-->
+                                <p:inputTextarea rows="6" cols="60" value="#{memmory.memoryUrl}"/>
+                            </c:if>
+                            <c:if test="#{memmory.memoryType == 'Photo'}">
+                                <image src="#{memmory.memoryUrl}" alt="MOMA"/>  
+                            </c:if>
+                            <c:if test="#{memmory.memoryType == 'Video'}">
+                                <p:media value="#{memmory.memoryUrl}" width="420" height="315" player="flash"/>
+                                put the link directly in the "value" parameter, e.g. http://www.youtube.com/v/KZnUr8lcqjo
+                            </c:if>
+
+                        <!--</p:panel>--> 
+                    </div>
+                </div>
+                
+            </c:forEach>
+            
+
+        </div>
+
+        <footer>
+            <h2><i>Developers</i> MOMA Developer Group</h2>
+            <a class="tzine" href="">Head on to <i>Tutorial<b>zine</b></i> to download this example</a>
+        </footer>
+
+        <!-- JavaScript includes - jQuery, turn.js and our own script.js -->
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="js/turn.js"></script>
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
+

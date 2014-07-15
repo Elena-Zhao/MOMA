@@ -1,0 +1,1 @@
+Cufon.replace('h3', { fontFamily: 'DIN 1451 Mittelschrift Alt' });

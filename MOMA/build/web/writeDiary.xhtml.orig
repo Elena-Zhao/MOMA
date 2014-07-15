@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Write Diary</title>
+        <style type="text/css">
+
+            .loginPage {
+                background-color:#ffffff;
+                background-image:url(img/bg.jpg);
+            }
+        </style>
+    </h:head>
+<<<<<<< HEAD
+    <h:body>
+=======
+    <h:body styleClass="loginPage">
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+
+
+        <h:form>
+            <p:messages/>
+            <p:panel style="display:inline-block; alignment-baseline: central; width: 60%; height: 600px; position:relative;left: 20%;">
+                <h:outputText value="Write Diary" style="font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+                              font-size: 35px;
+                              line-height: 35px;
+                              position: relative;
+                              font-weight: 400;
+                              color: rgba(26,89,120,0.9);
+                              text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+                              padding: 0px 0px 5px 0px;" />
+                <p:commandLink id="enterBroList" action="diaryList.xhtml" style="margin-right:20px; position: absolute; left: 55%;"  ajax="false">  
+                    <h:outputText value="返回我的日记列表-->" style="font-family: BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;" />  
+                </p:commandLink>
+                <br/><br/>
+<<<<<<< HEAD
+            </p:panel>
+            <p:panel style="display:inline-block;width:100%">
+                <h:inputText id="diary_title" value="#{writeDiaryBean.diary.diaryTitle}" required="true"/>
+=======
+                <h:inputText id="diary_title" value="#{writeDiaryBean.title}" required="true"/>
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+                <p:watermark for="diary_title" value="Add a title here." /> 
+                <br/><br/>
+                <h:outputText value="正文  "/>
+                <p:editor id="editor" value="#{writeDiaryBean.content}" width="600"/>
+                <br/>
+                <p:commandButton id="submitButton" value="保存" update="display" oncomplete="dlg.show()"  action="#{writeDiaryBean.doCompletion}"
+                                 icon="ui-icon-disk" ></p:commandButton>
+                <p:dialog header="Content" widgetVar="dlg" showEffect="fade" hideEffect="fade" modal="true">  
+                    <h:outputText id="display" value="#{writeDiaryBean.diary.diaryTitle} #{writeDiaryBean.content}" escape="false" />  
+                </p:dialog>  
+            </p:panel>
+
+        </h:form>
+        <!-- UJian Button BEGIN -->
+        <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&amp;fade=1&amp;uid=1799823"></script>
+        <a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+        <!-- UJian Button END -->
+    </h:body>
+</html>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/entity/moma/Blessing.hbm.xml</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/dao/hibernate/BlessingDao.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/dao/hibernate/UserDao.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/web/forgotPwd.xhtml</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/web/diaryList.xhtml</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/entity/moma/Blessing.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/formerServlet/moma/LoginServlet.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/formerServlet/moma/PersonalPageServlet.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/pfComponentBean/FileUploadController.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/formerServlet/moma/ResigterServlet.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/dao/hibernate/PhotoDao.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/web/modifySuccess.xhtml</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/formerServlet/moma/MyFriendServlet.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/managedbean/moma/ViewDiaryBean.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/dao/hibernate/HibernateUtil.java</file>
+            <file>file:/Users/Elena/Desktop/Elena/Documents/Curriculums/J2EE/第十四组J2ee报告/项目源码信息/MOMA/MOMA/src/java/com/dao/hibernate/BrochureDao.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,1000 @@
+/*=========================== TAGS ============================*/
+
+* { 
+	margin:0; 
+	padding:0;
+}
+
+html {
+	min-width:913px;
+} 
+
+body { 
+	background:#9ac005; 
+	font-family:"trebuchet MS", Helvetica, sans-serif; 
+	font-size:100%; 
+	line-height:1em; 
+	color:#352b28; 
+	min-width:913px;
+	height:100%;
+}
+
+object { 
+	vertical-align:top; 
+	outline:none;
+}
+
+input, 
+textarea, 
+select { 
+	font-family:"trebuchet MS", Helvetica, sans-serif; 
+	font-size:1em; 
+	vertical-align:middle; 
+	font-weight:normal;
+}
+
+fieldset {
+	border:0;
+}
+
+p { 
+	margin:0; 
+	padding:0;
+}
+
+img { 
+	border:0; 
+	vertical-align:top; 
+	text-align:left;
+}
+
+ul, 
+ol { 
+	list-style:none;
+}
+
+/*========================== ALIGMENT =========================*/
+
+.fleft { 
+	float:left;
+}
+
+.fright { 
+	float:right;
+}
+
+.clear { 
+	clear:both;
+}
+
+.alignright { 
+	text-align:right;
+}
+
+.aligncenter { 
+	text-align:center;
+}
+
+.wrapper { 
+	width:100%; 
+	overflow:hidden;
+}
+
+.extra-wrapp {
+	overflow:hidden;
+}
+
+.container { 
+	width:100%;
+}
+
+/*=========================== TAILING =========================*/
+
+.tail-top { 
+	background-color:  aliceblue;
+	position:relative;
+	z-index:2;
+}
+
+/*=========================== FORMS ===========================*/
+
+#contacts-form fieldset {
+	float:left;
+}
+#contacts-form .field1 {
+	width:300px;
+}
+#contacts-form .field2 {
+	width:286px;
+}
+#contacts-form .field1 div { 
+	height:45px;
+}
+#contacts-form label {
+	display:block;
+	padding-bottom:2px;
+}
+#contacts-form input {
+	width:244px; 
+	padding:1px 0 1px 3px; 
+	background:#fff;
+	color:#000; 
+	border:1px solid #c7c6c2; 
+	vertical-align:top;	
+	line-height:1.2em;
+}
+#contacts-form textarea { 
+	width:281px; 
+	height:108px; 
+	overflow:auto;
+	background:#fff;
+	color:#000; 
+	border:1px solid #c7c6c2; 
+	padding:1px 0 1px 3px;
+	margin-bottom:22px; 
+}
+#contacts-form .link1 a {
+	margin-left:22px;
+}
+
+/*========================== LISTS ============================*/
+
+.list {
+	margin-left:-20px;
+	position:relative;
+}
+.list li {
+	font-size:1.15em;
+	line-height:1.2em;
+	width:100%;
+	overflow:hidden;
+	vertical-align:top;
+	padding-bottom:1px;
+}
+.list li a {
+	color:#352b28;
+	text-decoration:none;
+	padding-left:16px;
+	display:block;
+	background:url(img/arrow.gif) no-repeat 20px 12px;
+	padding:5px 0 7px 36px;
+}
+.list li a:hover,
+.list li a.active {
+	background-color:#eae9e9;
+}
+
+.box-list {
+	padding-bottom:7px;
+}
+.box-list li {
+	float:left;
+	width:223px;
+	margin-right:7px;
+}
+.box-list li.last {
+	margin-right:0;
+}
+.box-list li ul li {
+	width:auto;
+	margin:0;
+	float:none;
+}
+
+.list1 li {
+	padding:0 0 14px 16px;
+	background-image:url(img/arrow1.gif);
+	background-repeat:no-repeat;
+	background-position:0 5px;
+	font-size:1.15em;
+}
+.list1 li.last {
+	padding-bottom:0;
+}
+.list1 li a {
+	text-decoration:none;
+	color:#fff;
+}
+.list1 li a:hover {
+	text-decoration:underline;
+}
+
+.list2 li {
+	width:100%;
+	overflow:hidden;
+	vertical-align:top;
+	padding-bottom:26px;
+}
+.list2 li.last {
+	margin:0;
+	padding:0;
+}
+
+.clients {
+	margin-top:-30px;
+}
+.clients li {
+	width:100%;
+	overflow:hidden;
+	vertical-align:top;
+	padding-top:30px;
+}
+.clients li img {
+	float:left;
+	margin-right:20px;
+}
+.clients li h4 {
+	margin:0;
+}
+.clients li p {
+	margin:0;
+}
+
+/*========================== OTHER ============================*/
+
+.img-box1 { 
+	width:100%; 
+	overflow:hidden;
+}
+.img-box1 img { 
+	float:left; 
+	margin:0 20px 0 0;
+}
+
+p { 
+	line-height:1.38em;
+	margin-bottom:20px;
+}
+.p0 {
+	margin:0;
+}
+.p1 {
+	margin-bottom:10px;
+}
+
+.address {
+	float:left;
+	width:167px;
+}
+.address span { 
+	float:right; 
+}
+.address p {
+	margin:0;
+}
+
+.testimonials strong {
+	color:#70a312;
+	display:block;
+	text-align:right;
+}
+p.testimonials {
+	margin:0;
+}
+
+dl {
+	line-height:1.38em;
+}
+dl dt {
+	color:#70a312;
+	font-weight:bold;
+}
+dl dd {
+	padding-bottom:20px;
+}
+dl dd.last {
+	padding:0;
+}
+
+/*================= TXT, LINKS, LINES, TITLES =================*/
+
+a {	
+	color:#70a312; 
+	outline:none;
+}
+a:hover {
+	text-decoration:none;
+}
+
+h3 {
+	font-size:24px;
+	line-height:1.2em;
+	letter-spacing:-1px;
+	text-transform:uppercase;
+	margin-bottom:25px;
+}
+h3 img {
+	position:relative;
+	margin:-8px 0 0 7px;
+}
+h4 {
+	font-size:1em;
+	line-height:1.38em;
+	margin-bottom:20px;
+}
+h5 {
+	color:#70a312;
+	font-size:1em;
+	line-height:1.38em;
+	margin-bottom:20px;
+}
+
+.link {
+	text-decoration:none;
+}
+.link:hover {
+	text-decoration:underline;
+}
+
+.link1 {
+	text-transform:uppercase; 
+	line-height:1.2em;
+	width:100%;
+	overflow:hidden;
+}
+.link1 a { 
+	display:block;
+	float:right; 
+	background:url(img/link1-right.png) no-repeat right top;  
+	color:#352b28;
+	text-decoration:none; 
+	cursor:pointer;
+}
+.link1 a em { 
+	display:inline-block;
+	background:url(img/link1-left.png) no-repeat left top;
+	padding:0 18px 0 26px;
+}
+.link1 a b { 
+	display:inline-block;
+	background:url(img/link1-tail.png) repeat-x left top;	
+	padding:11px 5px 12px 7px; 
+	font-style:normal; 
+	font-weight:normal;
+}
+.link1 a:hover b { 
+	text-decoration:underline;
+}
+
+.line-hor { 
+	margin:18px 0 30px 0;
+	height:1px;
+	background:url(img/line-hor.gif) repeat-x left top; 
+	overflow:hidden; 
+	font-size:0; 
+	line-height:0;
+}
+.line-hor.extra {
+	margin-top:34px;
+}
+
+/*============================ BOXES ==========================*/
+
+.box { 
+	width:100%; 
+}
+.box .left-top-corner {
+	height:73px;
+	padding-left:138px;
+	background-repeat:no-repeat;
+	background-position:left top;
+}
+.box .right-top-corner { 
+	height:73px; 
+	padding-right:45px;
+	background-repeat:no-repeat;
+	background-position:right top;
+}
+.box .right-bot-corner { 
+	height:23px;
+	background-repeat:no-repeat;
+	background-position:right bottom; 
+	padding-right:38px;
+}
+.box .left-bot-corner { 
+	height:23px; 
+	padding-left:74px;
+	background-repeat:no-repeat;
+	background-position:left bottom;
+}
+.box .border-top { 
+	height:73px;
+	background-repeat:repeat-x;
+	background-position:left top; 
+	font-size:0; 
+	line-height:0; 
+	width:100%;
+	position:relative;
+}
+.box .border-bot { 
+	height:23px;
+	background-repeat:repeat-x;
+	background-position:left top; 
+	font-size:0; 
+	line-height:0; 
+	width:100%;
+}
+.box .border-left { 
+	background-repeat:repeat-y;
+	background-position:left top; 
+}
+.box .border-right { 
+	background-repeat:repeat-y;
+	background-position:right top; 
+}
+.box .xcontent { 
+	width:100%;
+}
+.box .extra-border-bot {
+	background-repeat:repeat-x;
+	background-position:left bottom;
+}
+.box .extra-left-corner {
+	background-repeat:no-repeat;
+	background-position:left bottom;
+}
+.box .extra-right-corner {
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	min-height:184px;
+	height:auto!important;
+	height:184px;
+}
+.box .inner {
+	padding:0 22px 0 26px;
+}
+.box h3 {
+	color:#fff;
+	position:absolute;
+	left:-114px;
+	width:223px;
+	top:28px;
+}
+.box p {
+	color:#fff;
+	line-height:1.54em;
+}
+
+/*--- style1 ---*/
+
+.box.style1 .xcontent {
+	background-color:#fba01c;
+}
+.box.style1 .left-top-corner {
+	background-image:url(img/left-top-corner1.png);
+}
+.box.style1 .right-top-corner { 
+	background-image:url(img/right-top-corner1.png); 
+}
+.box.style1 .left-bot-corner { 
+	background-image:url(img/left-bot-corner1.png); 
+}
+.box.style1 .right-bot-corner { 
+	background-image:url(img/right-bot-corner1.png);
+}
+.box.style1 .border-top {
+	background-image:url(img/border-top1.gif);
+}
+.box.style1 .border-left { 
+	background-image:url(img/border-left1.gif); 
+}
+.box.style1 .border-right { 
+	background-image:url(img/border-right1.gif); 
+}
+.box.style1 .border-bot { 
+	background-image:url(img/border-bot1.gif); 
+}
+.box.style1 .extra-border-bot {
+	background-image:url(img/extra-border-bot1.gif);
+}
+.box.style1 .extra-left-corner {
+	background-image:url(img/extra-left-corner1.jpg);
+}
+.box.style1 .extra-right-corner {
+	background-image:url(img/extra-right-corner1.jpg);
+}
+
+/*--- style2 ---*/
+
+.box.style2 .xcontent {
+	background-color:#ffd120;
+}
+.box.style2 .left-top-corner {
+	background-image:url(img/left-top-corner2.png);
+}
+.box.style2 .right-top-corner { 
+	background-image:url(img/right-top-corner2.png); 
+}
+.box.style2 .left-bot-corner { 
+	background-image:url(img/left-bot-corner2.png); 
+}
+.box.style2 .right-bot-corner { 
+	background-image:url(img/right-bot-corner2.png);
+}
+.box.style2 .border-top {
+	background-image:url(img/border-top2.gif);
+}
+.box.style2 .border-left { 
+	background-image:url(img/border-left2.gif); 
+}
+.box.style2 .border-right { 
+	background-image:url(img/border-right2.gif); 
+}
+.box.style2 .border-bot { 
+	background-image:url(img/border-bot2.gif); 
+}
+.box.style2 .extra-border-bot {
+	background-image:url(img/extra-border-bot2.gif);
+}
+.box.style2 .extra-left-corner {
+	background-image:url(img/extra-left-corner2.jpg);
+}
+.box.style2 .extra-right-corner {
+	background-image:url(img/extra-right-corner2.jpg);
+}
+
+/*--- style3 ---*/
+
+.box.style3 .xcontent {
+	background-color:#ccdb01;
+}
+.box.style3 .left-top-corner {
+	background-image:url(img/left-top-corner3.png);
+}
+.box.style3 .right-top-corner { 
+	background-image:url(img/right-top-corner3.png);
+	padding-right:56px; 
+}
+.box.style3 .left-bot-corner { 
+	background-image:url(img/left-bot-corner3.png); 
+}
+.box.style3 .right-bot-corner { 
+	background-image:url(img/right-bot-corner3.png);
+	padding-right:65px;
+}
+.box.style3 .border-top {
+	background-image:url(img/border-top3.gif);
+}
+.box.style3 .border-left { 
+	background-image:url(img/border-left3.gif); 
+}
+.box.style3 .border-right { 
+	background-image:url(img/border-right3.gif); 
+}
+.box.style3 .border-bot { 
+	background-image:url(img/border-bot3.gif); 
+}
+.box.style3 .extra-border-bot {
+	background-image:url(img/extra-border-bot3.gif);
+}
+.box.style3 .extra-left-corner {
+	background-image:url(img/extra-left-corner3.jpg);
+}
+.box.style3 .extra-right-corner {
+	background-image:url(img/extra-right-corner3.jpg);
+}
+
+/*--- style4 ---*/
+
+.box.style4 .xcontent {
+	background-color:#8dbc16;
+}
+.box.style4 .left-top-corner {
+	background-image:url(img/left-top-corner4.png);
+}
+.box.style4 .right-top-corner { 
+	background-image:url(img/right-top-corner4.png);
+	padding-right:65px; 
+}
+.box.style4 .left-bot-corner { 
+	background-image:url(img/left-bot-corner4.png);
+	padding-left:95px; 
+}
+.box.style4 .right-bot-corner { 
+	background-image:url(img/right-bot-corner4.png);
+	padding-right:65px;
+}
+.box.style4 .border-top {
+	background-image:url(img/border-top4.gif);
+}
+.box.style4 .border-left { 
+	background-image:url(img/border-left4.gif); 
+}
+.box.style4 .border-right { 
+	background-image:url(img/border-right4.gif); 
+}
+.box.style4 .border-bot { 
+	background-image:url(img/border-bot4.gif); 
+}
+.box.style4 .extra-border-bot {
+	background-image:url(img/extra-border-bot4.gif);
+}
+.box.style4 .extra-left-corner {
+	background-image:url(img/extra-left-corner4.jpg);
+}
+.box.style4 .extra-right-corner {
+	background-image:url(img/extra-right-corner4.jpg);
+}
+
+/*---*/
+
+.box1 { 
+	width:100%;
+}
+.box1.alt {
+	margin:0 0 8px 0;
+	padding:0;
+}
+.box1 .left-top-corner { 
+	background:url(img/left-top-corner5.png) no-repeat left top; 
+	height:55px; 
+	padding-left:28px;
+}
+.box1 .right-top-corner { 
+	background:url(img/right-top-corner5.png) no-repeat right top; 
+	height:55px; 
+	padding-right:28px;
+}
+.box1 .border-top { 
+	height:55px;
+	background-color:#352b28; 
+	width:100%;
+}
+.box1 .left-bot-corner { 
+	background:url(img/left-bot-corner5.png) no-repeat left bottom; 
+	height:28px; 
+	padding-left:28px;
+}
+.box1 .right-bot-corner { 
+	background:url(img/right-bot-corner5.png) no-repeat right bottom; 
+	height:28px; 
+	padding-right:28px;
+}
+.box1 .border-bot { 
+	height:28px;
+	background-color:#fff; 
+	font-size:0; 
+	line-height:0; 
+	width:100%;
+}
+.box1 .xcontent {
+	background-color:#fff;
+	padding:23px 19px 10px 39px;
+}
+.box1 h4 {
+	color:#fff;
+	font-weight:normal;
+	text-transform:uppercase;
+	padding:19px 0 0 12px;
+	margin:0;
+}
+
+/*---*/
+
+.box2 { 
+	width:100%;
+	position:relative;
+}
+.box2 .left-top-corner { 
+	background:url(img/left-top-corner6.png) no-repeat left top; 
+	height:28px; 
+	padding-left:28px;
+}
+.box2 .right-top-corner { 
+	background:url(img/right-top-corner6.png) no-repeat right top; 
+	height:28px; 
+	padding-right:28px;
+}
+.box2 .border-top { 
+	height:28px;
+	background-color:#fff; 
+	width:100%;
+}
+.box2 .left-bot-corner { 
+	background:url(img/left-bot-corner6.png) no-repeat left bottom; 
+	height:28px; 
+	padding-left:28px;
+}
+.box2 .right-bot-corner { 
+	background:url(img/right-bot-corner6.png) no-repeat right bottom; 
+	height:28px; 
+	padding-right:28px;
+}
+.box2 .border-bot { 
+	height:28px;
+	background-color:#fff; 
+	font-size:0; 
+	line-height:0; 
+	width:100%;
+}
+.box2 .xcontent {
+	background-color:#fff;
+	width:100%;
+}
+.box2 .inner {
+	padding:5px 29px 35px 39px;
+}
+.box2 .list1 li {
+	background-image:url(img/arrow.gif);
+}
+.box2 .list1 li a {
+	color:#352b28;
+}
+
+/*========================== HEADER ===========================*/
+
+#header .fleft {
+	padding-top:141px;
+}
+#header .fleft a {
+	cursor:pointer;
+}
+#header .fright {
+	padding:9px 14px 0 0;
+	position:relative;
+}
+
+/*========================= CONTENT ===========================*/
+
+#content .indent {
+	margin-right:55px;
+}
+
+/*========================= FOOTER ============================*/
+
+#footer,
+#footer a {
+	color:#fff;
+	text-transform:uppercase;
+}
+
+/*=============================================================*/
+
+/*--- bgstretcher ---*/
+.bgstretcher {
+	background: black;
+	overflow: hidden;
+	width: 100%;
+	position: fixed !important;
+	z-index: 1;
+}
+.bgstretcher, .bgstretcher UL, .bgstretcher UL LI {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+.bgstretcher UL, .bgstretcher UL LI {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*--- carousel ---*/
+.carousel-box {
+	position:relative;
+	width:600px;
+	height:196px;
+}
+.carousel-box .prev {
+	position:absolute;
+	left:-21px;
+	top:80px;
+}
+.carousel-box .next {
+	position:absolute;
+	left:612px;
+	top:80px;
+}
+.carousel-box .carousel {
+	width:600px;
+	overflow:hidden;
+}
+.carousel-box ul li {
+	float:left;
+	border:0;
+	margin-right:13px;
+	position:relative;
+}
+.carousel-box ul li a {
+	 width:192px;
+	 height:181px;
+	 display:block;
+}
+
+/*--- twitter ---*/
+.twitted {
+	width:308px;
+	position:relative;
+	overflow:hidden;
+	margin-bottom:-12px;
+}
+
+.twitted p.preLoader {
+	margin: 0;
+	padding: 1em 1em 1em 3em;
+	background: transparent url(img/loader.gif) 1em center no-repeat;
+	/* generate your own loader gif: http://www.ajaxload.info */
+}
+
+.twitted ul#twitter_update_list {
+	margin: 0;
+	list-style-type: none;
+	font-size:13px;
+	line-height:18px;
+	color:#707070;
+	margin:-12px 0 0 0;
+}
+
+				.twitted ul#twitter_update_list li div div div div {
+					background:none;
+					padding:12px 0 2px 0;
+					background:url(img/line-hor1.gif) repeat-x left top;
+					margin-bottom:12px;
+				}
+
+.twitted ul#twitter_update_list li span {
+	/* tweet content */
+	display: block;
+	color:#352b28;
+	text-align:left;
+}
+
+.twitted ul#twitter_update_list li span a {
+	/* links in tweet content */
+	color:#70a312;
+	text-decoration:underline;
+	font-weight:bold;
+	font-size:1em;
+}
+.twitted ul#twitter_update_list li span a:hover {
+	text-decoration:none;
+}
+
+.twitted ul#twitter_update_list li a {
+	/* timestamp link */
+	color:#70a312;
+	text-decoration:none;
+}
+.twitted ul#twitter_update_list li a:hover {
+	text-decoration:underline;
+}
+
+.twitted ul#twitter_update_list li.lastTweet {
+	border-bottom: none;
+}
+
+.twitted p.profileLink {
+	display:none;
+}
+	.twitted p.profileLink a {
+		display:block;
+		color:#707070;
+		text-decoration:underline;
+	}
+	.twitted p.profileLink a:hover {
+		text-decoration:none;
+	}
+	
+/* anythingSlider */
+.anythingSlider                         { width: 600px; height: 524px; position: relative;}
+.anythingSlider .wrapper                { width: 600px; height: 524px; position: absolute; top: 0; left: 0;}
+.anythingSlider .wrapper ul             { width: 9999px; list-style: none; position: absolute; top: 0; left: 0; margin: 0; }
+.anythingSlider ul li                   { display:block; float: left; padding: 0; height: 524px; width:600px; position:relative;}
+.anythingSlider ul li img.slide {
+	float:left;
+}
+
+#start-stop                             { display:none;}
+/* anythingSlider */
+
+/* gallery */
+#img {
+    width:600px;
+    height:323px;
+}
+
+#gallery { 
+	height:201px;
+	width:600px;
+}
+
+#gallery li {
+    float: left;
+    cursor: pointer;
+    margin-right:11px;
+}
+
+.caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 96%;
+    height: 50px;
+    padding: 0 2%;
+    line-height: 50px;
+    color: #fff;
+    display:none !important;
+}
+
+
+.jcarousel-container {
+	position:relative;
+	padding:0;
+	width:600px;
+}
+
+.jcarousel-clip {
+	width:600px;
+	overflow:hidden;
+}
+
+.jcarousel-prev {
+    position: absolute;
+    top: 80px;
+    left: -21px;
+    width: 10px;
+    height: 19px;
+    cursor: pointer;
+    background:url(img/prev.gif) no-repeat left top;
+    z-index:1000;
+}
+.jcarousel-prev:hover {}
+
+.jcarousel-next {
+    position: absolute;
+    top: 80px;
+    left: 608px;
+    width: 10px;
+    height: 19px;
+    cursor: pointer;
+    background:url(img/next.gif) no-repeat left top;
+    z-index:1000;
+}
+.jcarousel-next:hover {}
+
+.jcarousel-clip {
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.jcarousel-list {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel-list li,
+.jcarousel-item {
+    float: left;
+    list-style: none;
+    /* We set the width/height explicitly. No width/height causes infinite loops. */
+    width: 192px;
+    height: 181px;
+}
+
+/**
+ * The buttons are added dynamically by jCarousel before
+ * the <ul> list (inside the <div> described above) and
+ * have the classnames "jcarousel-next" and "jcarousel-prev".
+ */
+.jcarousel-next {
+    z-index: 3;
+    display: none;
+}
+
+.jcarousel-prev {
+    z-index: 3;
+    display: none;
+}
+/* gallery */	
+	

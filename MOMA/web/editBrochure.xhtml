@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>#{editBrochure.broName}</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:layout  style="min-width: 300px;
+                       min-height: 800px;
+                       " id="layout" fullPage="false">  
+                <p:layoutUnit position="west" resizable="true" size="370px"  collapsible="true" effect="drop" gutter="20">  
+                    <h:form>
+                        <p:menu>  
+                            <p:submenu label="编辑纪念册">  
+<!--                                <p:menuitem value="文章" outcome="/diaryList.xhtml" icon="ui-icon-disk" />  -->
+                                <p:menuitem value="照片" outcome="/viewPhoto.xhtml" icon="ui-icon-arrowrefresh-1-w"/>
+                                <p:menuitem value="视频" outcome="/videoList.xhtml" icon="ui-icon-arrowrefresh-1-w"/> 
+                            </p:submenu>  
+                            <p:submenu label="Navigation">  
+                                <p:menuitem value="浏览纪念册" update="messages" ajax="false" />  
+                            </p:submenu> 
+                        </p:menu>   
+                    </h:form>
+
+                </p:layoutUnit>  
+                <p:spacer width="30"></p:spacer>
+                <p:layoutUnit position="center" size="500">  
+                    <h:form>
+                        <p:messages/>
+                        <h3>纪念册更新</h3>
+                        <p:separator/>
+                        <p:accordionPanel multiple="true" value="#{userHomePageBean.updates}" var="update">  
+                            <p:tab title="update.brochure.name">  
+                                <h:panelGrid columns="2" cellpadding="10">  
+                                    <p:graphicImage value="/img/brochure/#{update.brochure.name}.jpg" width="100"/>
+                                    <!--以下就是根据更新内容的不同做不同的显示处理-->
+                                    <c:if test="#{update.type} == text">
+                                        <p:inputTextarea rows="6" cols="60" value="#{update.content}" />
+                                    </c:if>
+                                    <c:if test="#{update.type} == photo">
+                                        <p:imageSwitch effect="shuffle">  
+                                            <ui:repeat value="#{update.content}" var="image">  
+                                                <p:graphicImage value="/img/album/#{image}.jpg" />  
+                                            </ui:repeat>  
+                                        </p:imageSwitch>  
+                                    </c:if>
+                                    <c:if test="#{update.type} == video">
+                                        <p:media value="#{update.content}" width="420" height="315" player="flash"/>
+                                        <!--put the link directly in the "value" parameter, e.g. http://www.youtube.com/v/KZnUr8lcqjo-->
+                                    </c:if>
+
+                                </h:panelGrid>  
+                            </p:tab>
+                        </p:accordionPanel>  
+                    </h:form> 
+
+                </p:layoutUnit>  
+            </p:layout>
+
+        </h:form>
+    </h:body>
+</html>
+
+
+

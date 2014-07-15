@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-6-18 22:31:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.entity.moma.Comment" table="comment" catalog="moma_db">
+        <id name="commentId" type="java.lang.Integer">
+            <column name="comment_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="com.entity.moma.User" fetch="select">
+            <column name="comment_user_id" not-null="true" />
+        </many-to-one>
+        <property name="commentUrl" type="string">
+            <column name="comment_url" not-null="true" unique="true" />
+        </property>
+        <property name="commentTargetId" type="int">
+            <column name="comment_target_id" not-null="true" unique="true" />
+        </property>
+        <property name="commentBrochureType" type="int">
+            <column name="comment_brochure_type" not-null="true" />
+        </property>
+        <property name="commentBrochureId" type="int">
+            <column name="comment_brochure_id" not-null="true" unique="true" />
+        </property>
+        <property name="commentTime" type="timestamp">
+            <column name="comment_time" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+
+    <h:head>
+        <title>User Info Completion Page</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./layoutTemplate/template.xhtml">
+            <ui:define name="header">
+                <ui:include src="./layoutTemplate/header.xhtml" />
+            </ui:define>
+            <ui:define name="footer">
+                <ui:include src="./layoutTemplate/footer.xhtml" />
+            </ui:define>
+            <ui:define name="menu">
+                <ui:include src="./layoutTemplate/menu.xhtml" />
+            </ui:define>
+            <ui:define name="body">
+                <h2>博客设置</h2>
+                <h:form>
+                    <p:messages/>
+                    <p:panel style="display:inline-block;width:100%"  header="Please Complete the Following Infomation">
+                        <h:panelGrid columns="2" 
+                                    
+                                     headerClass="align-center">
+                            <f:facet name="header">
+                                <h:outputText value="博客详细信息"/>
+                            </f:facet>
+
+                            <h:outputText value="Brochure Name"/>
+                            <p:inputText id="brochure_name" 
+                                         required="true"/>
+                            <h:outputText value="Brochure Description(At most 30 charactors)"/>
+                            
+                                <p:inputTextarea rows="5" cols="30" counter="counter" maxlength="100"       
+                                                 counterTemplate="{0} characters remaining." autoResize="false"
+                                                 required="true"/>
+                                <h:outputText id="counter" />  
+                         
+
+                            <br/>
+                            <h:outputText value="Brochure Avatar"/>
+                            <h:panelGroup>
+                                <c:if test="">
+                                    <h:graphicImage value="./img/brochure.png"/>
+                                </c:if>
+                                <c:if test="#">
+                                    <h:graphicImage value="#"/>
+                                </c:if>
+                                <h:outputText value="上传头像"/>
+                                <h:form enctype="multipart/form-data">  
+                                    <p:fileUpload fileUploadListener="#{fileUploadController.handleFileUpload}"  
+                                                  mode="advanced"  
+                                                  update="messages"  
+                                                  auto="true"  
+                                                  sizeLimit="100000"   
+                                                  allowTypes="/(\.|\/)(gif|jpe?g|png)$/"/>  
+                                    <p:growl id="messages" showDetail="true"/>  
+                                </h:form>
+                                <h:outputText value="摄像"/>   
+                                <h:form>  
+
+                                    <h:panelGrid columns="3">  
+                                        <p:photoCam widgetVar="pc" listener="#{photoCamBean.oncapture}" update="photos"/>  
+
+                                        <p:commandButton type="button" value="Capture" onclick="pc.capture()"/>  
+
+                                        <p:imageSwitch effect="zoom" id="photos">  
+                                            <ui:repeat value="#{photoCamBean.photos}" var="photo">  
+                                                <p:graphicImage value="/photocam/#{photo}.png" />  
+                                            </ui:repeat>  
+                                        </p:imageSwitch>  
+                                    </h:panelGrid>  
+
+                                </h:form>  
+                            </h:panelGroup>
+                        </h:panelGrid>
+                    </p:panel>
+                </h:form>  
+            </ui:define>
+        </ui:composition>
+
+
+    </h:body>
+</html>
+
+

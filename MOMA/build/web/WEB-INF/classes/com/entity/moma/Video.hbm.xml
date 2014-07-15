@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-6-18 22:31:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.entity.moma.Video" table="video" catalog="moma_db">
+        <id name="videoId" type="java.lang.Integer">
+            <column name="video_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="brochure" class="com.entity.moma.Brochure" fetch="select">
+            <column name="video_brochure_fk" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="com.entity.moma.User" fetch="select">
+            <column name="video_user_fk" not-null="true" />
+        </many-to-one>
+        <property name="videoStartTime" type="timestamp">
+            <column name="video_start_time" length="19" not-null="true" />
+        </property>
+        <property name="videoUrl" type="string">
+            <column name="video_url" not-null="true" unique="true" />
+        </property>
+        <property name="videoTitle" type="string">
+            <column name="video_title" length="32" not-null="true" />
+        </property>
+        <property name="videoModifyTime" type="timestamp">
+            <column name="video_modify_time" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

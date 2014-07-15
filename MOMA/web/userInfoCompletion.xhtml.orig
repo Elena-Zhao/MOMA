@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+    <h:head>
+        <title>User Info Completion Page</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./layoutTemplate/template.xhtml">
+            <ui:define name="header">
+                 <ui:include src="./layoutTemplate/header.xhtml" />
+            </ui:define>
+            <ui:define name="footer">
+                 <ui:include src="./layoutTemplate/footer.xhtml" />
+            </ui:define>
+            <ui:define name="menu">
+                 <ui:include src="./layoutTemplate/menu.xhtml" />
+            </ui:define>
+            <ui:define name="body">
+                <h2>User Infomation Data Entry</h2>
+                <h:form>
+                    <p:messages/>
+                    <p:panel style="display:inline-block;width:100%"  header="Please Complete the Following Infomation">
+                        <h:panelGrid columns="2">
+                            <h:outputText value="Real Name"/>
+<<<<<<< HEAD
+                            <p:inputText id="realName" value="#{userInfoCompletionBean.user.userRealName}"/>
+
+                            <h:outputText value="E-mail"/>
+                            <p:autoComplete id ="email" value="#{userInfoCompletionBean.user.userEmail}"
+                                            completeMethod="#{autoCompleteBean.user.complete}"/>
+=======
+                            <p:inputText id="realName" value="#{userInfoCompletionBean.userRealName}" required="true"/>
+
+                            <h:outputText value="E-mail"/>
+                            <p:autoComplete id ="email" value="#{userInfoCompletionBean.userEmail}"
+                                            completeMethod="#{autoCompleteBean.complete}" required="true"/>
+>>>>>>> origin/elena
+
+                            <h:outputText value="Phone Number"/>
+                            <p:inputMask id ="phoneNumber" value="#{userInfoCompletionBean.user.phoneNumber}" mask="(999) 999-9999-9999"/>
+
+                            <h:outputText value="QQ Number"/>
+                            <p:inputText id="qqNumber" value="#{userInfoCompletionBean.user.qqNumber}" />
+
+                            <h:outputText value="Address Line1"/>
+                            <p:inputText id="addressLine1" value="#{userInfoCompletionBean.user.adressFirstLine}"/>
+
+                            <h:outputText value="Address Line2"/>
+                            <p:inputText id="addressLine2" value="#{userInfoCompletionBean.user.adressSecondLine}"/>
+                        </h:panelGrid>
+                    </p:panel>
+
+                    <p:commandButton value="Submit" id="submit" update="display" oncomplete="dialog.show()" actionListener="#{userInfoCompletionBean.doCompletion}" />  
+                    <p:dialog header="User Information" widgetVar="dialog" showEffect="fold" hideEffect="fold" width="200">
+                        <h:panelGrid id="display" columns="2" cellpadding="5">
+                            <h:outputText value="Real Name:"/>
+                            <h:outputText value="#{userInfoCompletionBean.user.userRealName}"/>
+                            <h:outputText value="E-mail:"/>
+                            <h:outputText value="#{userInfoCompletionBean.user.userEmail}"/>
+                            <h:outputText value="Phone Number:"/>
+                            <h:outputText value="#{userInfoCompletionBean.user.phoneNumber}"/>
+                            <h:outputText value="QQ Number:"/>
+                            <h:outputText value="#{userInfoCompletionBean.user.qqNumber}"/>
+                            <h:outputText value="Address:"/>
+                            <h:outputText value="#{userInfoCompletionBean.user.adressCountry} #{userInfoCompletionBean.user.adressProvince} 
+                                          #{userInfoCompletionBean.user.adressSecondLine} #{userInfoCompletionBean.user.adressFirstLine}"/>    
+                        </h:panelGrid>
+                    </p:dialog>  
+
+                </h:form>  
+            </ui:define>
+        </ui:composition>
+
+
+    </h:body>
+</html>
+

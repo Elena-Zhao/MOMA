@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+<<<<<<< HEAD
+        <title>#{userHomePageBean.user.userName}'s Home</title>
+=======
+        <title>#{userHomePage.userName}'s Home</title>
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+        <link rel="stylesheet" type="text/css" href="./css/generalStyle.css" media="all" />
+        <style type="text/css">
+
+            .loginPage {
+                background-color:#ffffff;
+                background-image:url(img/bg.jpg);
+            }
+
+            .accordion-toggle{
+                background-color: #F3F3F3;
+                opacity: 0.6;
+            }
+            .editer{
+                display: block;
+                font-family: Georgia;
+                color: #0057CC;       
+                margin-left: 10%;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".overEnlargeBtn").click(function() {
+                    $(".overEnlargeTarget").animate({height: "300px", width: "300px", opacity: '0.4'}, "slow");
+                });
+            });
+        </script>
+
+    </h:head>
+    <h:body styleClass="loginPage">
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <h:outputLink styleClass="brand" value="#">
+                        <h:outputText value="MOMA" />
+                    </h:outputLink>
+                    <ul class="nav">
+                        <li><h:outputLink value="#">
+                                <h:outputText value="首页" />
+                            </h:outputLink>
+                        </li>
+                        <li class="active">
+                            <h:outputLink value="#">
+                                <h:outputText value="我的纪念册" />
+                            </h:outputLink>
+                        </li>
+                        <li>
+                            <h:outputLink value="Friends.xhtml">
+                                <h:outputText value="我的好友" />
+                            </h:outputLink>
+                        </li>
+
+                    </ul>
+
+                    <h:form styleClass="navbar-search pull-right" >
+
+                        <p:inputText id="search" label="search" styleClass="search-query" value="#{searchBean.searchName}" />
+                        <p:watermark for="search" value="找朋友、找同事、找家人" />
+
+                    </h:form>
+                    <ul class="nav pull-right ">
+                        <li>
+                            <h:outputLink value="#">
+                                <h:outputText value="搜索好友/纪念册" />
+                            </h:outputLink>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <h:form>
+            <p:messages/>
+            <p:panel style="display:inline-block; width: 25%; min-height: 300px; position:relative;left: 20%;"  >
+                <h:panelGrid columns="2" cellpadding="10">  
+<<<<<<< HEAD
+                    <p:graphicImage value="#{userHomePageBean.user.userPortraitUrl}" width="100" />  
+
+                    <h:panelGrid columns="1" cellpadding="10">  
+                        <h:outputText value="#{userHomePageBean.user.userName}" style="font-weight: bold" />  
+=======
+                    <p:graphicImage value="#{userHomePageBean.user.image}" width="100" />  
+
+                    <h:panelGrid columns="1" cellpadding="10">  
+                        <h:outputText value="#{userHomePageBean.user.name}" style="font-weight: bold" />  
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+                        <p:commandLink id="userInfo"  style="margin-right:20px;" ajax="false">  
+                            <!--缺省action 响应参数上面一句用的是action还是actionListner不确定。。初步确定效果就是弹出严俊杰做的那个wizard，或者用dialog组件 -->
+                            <h:outputText value="修改个人资料" style="font-size:14px;"/>
+                        </p:commandLink>
+                        <p:commandLink id="changeAvatar"  style="margin-right:20px;" ajax="false">  
+                            <!--缺省action 响应参数上面一句用的是action还是actionListner不确定。。初步确定效果就是弹出严俊杰做的那个wizard，或者用dialog组件 -->
+                            <h:outputText value="修改头像" style="font-size:14px;"/>
+                        </p:commandLink>
+                    </h:panelGrid> 
+                </h:panelGrid>  
+                <p:separator/>
+
+                <p:commandLink id="enterBroList" action="PersonalSpace.xhtml" style="margin-right:20px; position: absolute; bottom: 5px;"  ajax="false">  
+                    <h:outputText value="进入我的纪念册列表->" />  
+                </p:commandLink>
+            </p:panel>
+        </h:form> 
+        <br/><br/>
+        <h:form>
+
+            <p:carousel id="recommendedBros" value="#{userHomePageBean.recommendedBros}" var="brochure" 
+                        itemStyleClass="carItem" style="width: 25%; min-height: 300px; position:relative;left: 20%; ">  
+                <f:facet name="header">  
+                    推荐 
+                </f:facet>  
+                <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+<<<<<<< HEAD
+                    <p:graphicImage value="#{brochure.brochureImageUrl}"/>   
+                    <!--                                 这里我突然有一个想法，纪念册图片上传以后，以纪念册名字命名，找的时候路径就是固定的了，变名字就好了-->
+                    <p:commandLink id="recommandedBro1" style="margin-right:20px;" ajax="false">  
+                        <h:outputText value="#{brochure.brochureName}" />  
+                    </p:commandLink>
+                    <h:outputText value="#{brochure.brochureDescription}" />  
+=======
+                    <p:graphicImage value="/img/brochure/#{brochure.name}.jpg"/>   
+                    <!--                                 这里我突然有一个想法，纪念册图片上传以后，以纪念册名字命名，找的时候路径就是固定的了，变名字就好了-->
+                    <p:commandLink id="recommandedBro1" style="margin-right:20px;" ajax="false">  
+                        <h:outputText value="#{brochure.name}" />  
+                    </p:commandLink>
+                    <h:outputText value="#{brochure.description}" />  
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+                </h:panelGrid>  
+            </p:carousel>  
+        </h:form>
+
+
+<<<<<<< HEAD
+        <c:if test="#{userHomePageBean.host}">
+            <p:tabView id="upDate"  style="display:inline-block; min-height: 900px; position:absolute;left: 47%;right: 20%;top:60px;"  >  
+
+                <p:tab id="tab1" title="#{userHomePageBean.user.userName}的纪念册更新" >
+                    <p:accordionPanel multiple="true" value="#{userHomePageBean.userUpdate}" var="myBroUpdate">  
+                        <p:tab title="#{myBroUpdate.brochure.brochureName}">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="#{myBroUpdate.brochure}" width="100"/>
+                                <!--上面图片的路径你就自己改吧~-->
+                                <!--以下就是根据更新内容的不同做不同的显示处理-->
+                                <c:if test="#{myBroUpdate.brochure.latestChangeType} == 'text'">
+                                    <p:inputTextarea rows="6" cols="60" value="#{myBroUpdate.brochure.latestChange}" />
+                                </c:if>
+                                <c:if test="#{myBroUpdate.brochure.latestChangeType} == 'photo'">
+                                    <p:imageSwitch effect="shuffle">  
+                                        <ui:repeat value="#{myBroUpdate.brochure.latestChange}" var="image">  
+                                            <p:graphicImage value="#{myBroUpdate.brochure.latestChange}" />  
+                                        </ui:repeat>  
+                                    </p:imageSwitch>  
+                                </c:if>
+                                <c:if test="#{myBroUpdate.brochure.latestChangeType} == 'video'">
+                                    <p:media value="#{myBroUpdate}" width="420" height="315" player="flash"/>
+=======
+        <c:if test="#{userHomePage.isHost}">
+            <p:tabView id="upDate"  style="display:inline-block; min-height: 900px; position:absolute;left: 47%;right: 20%;top:60px;"  >  
+
+                <p:tab id="tab1" title="我的纪念册更新" >
+                    <p:accordionPanel multiple="true" value="#{userHomePageBean.myBroUpdates}" var="myBroUpdate">  
+                        <p:tab title="myBroUpdate.brochure.name">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="/img/brochure/#{myBroUpdate.brochure.name}.jpg" width="100"/>
+                                <!--上面图片的路径你就自己改吧~-->
+                                <!--以下就是根据更新内容的不同做不同的显示处理-->
+                                <c:if test="#{myBroUpdate.type} == 'text'">
+                                    <p:inputTextarea rows="6" cols="60" value="#{myBroUpdate.content}" />
+                                </c:if>
+                                <c:if test="#{myBroUpdate.type} == 'photo'">
+                                    <p:imageSwitch effect="shuffle">  
+                                        <ui:repeat value="#{myBroUpdate.content}" var="image">  
+                                            <p:graphicImage value="/img/album/#{image}.jpg" />  
+                                        </ui:repeat>  
+                                    </p:imageSwitch>  
+                                </c:if>
+                                <c:if test="#{myBroUpdatee.type} == 'video'">
+                                    <p:media value="#{myBroUpdate.content}" width="420" height="315" player="flash"/>
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+                                    <!--put the link directly in the "value" parameter, e.g. http://www.youtube.com/v/KZnUr8lcqjo-->
+                                </c:if>
+
+                            </h:panelGrid>  
+                        </p:tab>
+                    </p:accordionPanel> 
+                </p:tab>  
+
+                <p:tab id="tab2" title="关注纪念册更新"/>  
+<<<<<<< HEAD
+                <p:accordionPanel multiple="true" value="#{userHomePageBean.brochureUpdates}" var="followedBroUpdate">  
+                    <p:tab>  
+                        <h:panelGrid columns="2" cellpadding="10">  
+                            <p:graphicImage value="#{followedBroUpdate.content}" width="100"/>
+=======
+                <p:accordionPanel multiple="true" value="#{userHomePageBean.followedBroUpdates}" var="myBroUpdate">  
+                    <p:tab>  
+                        <h:panelGrid columns="2" cellpadding="10">  
+                            <p:graphicImage value="/img/brochure/#{followedBroUpdate.brochure.name}.jpg" width="100"/>
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+                            <!--上面图片的路径你就自己改吧~-->
+                            <!--以下就是根据更新内容的不同做不同的显示处理-->
+                            <c:if test="#{followedBroUpdate.type} == 'text'">
+                                <p:inputTextarea rows="6" cols="60" value="#{followedBroUpdate.content}" />
+                            </c:if>
+                            <c:if test="#{followedBroUpdate.type} == 'photo'">
+                                <p:imageSwitch effect="shuffle">  
+                                    <ui:repeat value="#{followedBroUpdate.content}" var="image">  
+                                        <p:graphicImage value="/img/album/#{image}.jpg" />  
+                                    </ui:repeat>  
+                                </p:imageSwitch>  
+                            </c:if>
+                            <c:if test="#{followedBroUpdatee.type} == 'video'">
+                                <p:media value="#{followedBroUpdate.content}" width="420" height="315" player="flash"/>
+                                <!--put the link directly in the "value" parameter, e.g. http://www.youtube.com/v/KZnUr8lcqjo-->
+                            </c:if>
+
+                        </h:panelGrid>  
+                    </p:tab>
+                </p:accordionPanel>
+
+            </p:tabView>
+        </c:if>
+
+<<<<<<< HEAD
+        <c:if test="#{!userHomePageBean.host}">
+            <p:tabView id="upDate"  style="display:inline-block; min-height: 900px; position:absolute;left: 47%;right: 20%;top:60px;"  >  
+
+                <p:tab id="tab1" title="#{userHomePageBean.user.userName}的的纪念册更新" >
+                    <p:accordionPanel multiple="true" value="#{userHomePageBean.userUpdate}" var="myBroUpdate">  
+                        <p:tab title="#{myBroUpdate.brochure.brochureName}">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="#{myBroUpdate.brochure.brochureImageUrl}" width="100"/>
+                                <!--上面图片的路径你就自己改吧~-->
+                                <!--以下就是根据更新内容的不同做不同的显示处理-->
+                                <c:if test="#{myBroUpdate.brochure.latestChangeType} == 'text'">
+                                    <p:inputTextarea rows="6" cols="60" value="#{myBroUpdate.brochure.latestChange}" />
+                                </c:if>
+                                <c:if test="#{myBroUpdate.brochure.latestChangeType} == 'photo'">
+                                    <p:imageSwitch effect="shuffle">  
+                                        <ui:repeat value="#{myBroUpdate.brochure.latestChange}" var="image">  
+                                            <p:graphicImage value="#{myBroUpdate.brochure.latestChange}" />  
+                                        </ui:repeat>  
+                                    </p:imageSwitch>  
+                                </c:if>
+                                <c:if test="#{myBroUpdate.brochure.latestChangeType} == 'video'">
+                                    <p:media value="#{myBroUpdate.brochure.latestChange}" width="420" height="315" player="flash"/>
+=======
+        <c:if test="#{!userHomePage.isHost}">
+            <p:tabView id="upDate"  style="display:inline-block; min-height: 900px; position:absolute;left: 47%;right: 20%;top:60px;"  >  
+
+                <p:tab id="tab1" title="我的纪念册更新" >
+                    <p:accordionPanel multiple="true" value="#{userHomePageBean.myBroUpdates}" var="myBroUpdate">  
+                        <p:tab title="myBroUpdate.brochure.name">  
+                            <h:panelGrid columns="2" cellpadding="10">  
+                                <p:graphicImage value="/img/brochure/#{myBroUpdate.brochure.name}.jpg" width="100"/>
+                                <!--上面图片的路径你就自己改吧~-->
+                                <!--以下就是根据更新内容的不同做不同的显示处理-->
+                                <c:if test="#{myBroUpdate.type} == 'text'">
+                                    <p:inputTextarea rows="6" cols="60" value="#{myBroUpdate.content}" />
+                                </c:if>
+                                <c:if test="#{myBroUpdate.type} == 'photo'">
+                                    <p:imageSwitch effect="shuffle">  
+                                        <ui:repeat value="#{myBroUpdate.content}" var="image">  
+                                            <p:graphicImage value="/img/album/#{image}.jpg" />  
+                                        </ui:repeat>  
+                                    </p:imageSwitch>  
+                                </c:if>
+                                <c:if test="#{myBroUpdatee.type} == 'video'">
+                                    <p:media value="#{myBroUpdate.content}" width="420" height="315" player="flash"/>
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+                                    <!--put the link directly in the "value" parameter, e.g. http://www.youtube.com/v/KZnUr8lcqjo-->
+                                </c:if>
+
+                            </h:panelGrid>  
+                        </p:tab>
+                    </p:accordionPanel> 
+                </p:tab>             
+            </p:tabView>
+        </c:if>
+
+
+        <!--        </p:panel>-->
+        <!-- UJian Button BEGIN -->
+        <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&amp;fade=1&amp;uid=1799823"></script>
+        <a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+        <!-- UJian Button END -->
+    </h:body>
+</html>
+

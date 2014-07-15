@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-6-18 22:31:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.entity.moma.GroupOwner" table="group_owner" catalog="moma_db">
+        <id name="groupId" type="java.lang.Integer">
+            <column name="group_id" />
+            <generator class="identity" />
+        </id>
+        <property name="ownerId" type="int">
+            <column name="owner_id" not-null="true" />
+        </property>
+        <property name="groupName" type="string">
+            <column name="group_name" length="45" />
+        </property>
+        <set name="users" inverse="false" table="group_member" lazy="false">
+            <key>
+                <column name="group_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.entity.moma.User">
+                <column name="group_member" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

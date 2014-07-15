@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view contentType="text/html">
+        <h:head>
+            <link rel="stylesheet" type="text/css" href="./css/generalStyle.css" media="all" />
+            <title>Welcome to MOMA</title>
+        </h:head>
+        <h:body>
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <h:outputLink styleClass="brand" value="#">
+                            <h:outputText value="MOMA" />
+                        </h:outputLink>
+
+
+                        <h:form styleClass="navbar-search pull-right" >
+                          
+                            <p:inputText id="search" styleClass="search-query" value="#{searchBean.searchName}" />
+                            <p:watermark for="search" value="找朋友、找同事、找家人" />
+                            
+                        </h:form>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="span3 offset2 text-center" id="welcomeMessage">
+                        <h2>
+                            Keep your memories,<br /> keep them alive.
+                        </h2>
+                    </div>
+                    <div class="span2 pull-right"></div>
+                    <div class="span5 pull-right ">
+                        <div class="hero-unit">
+                            <h:form>                               
+                                <p:inputText id="loginUserName" styleClass="span3" value="#{welcomeBean.loginUserName}" />
+                                <p:watermark for="loginUserName" value="用户名" /><br />
+                                <div class="controls controls-row"> 
+                                    <p:password id="loginUserPassword" value="#{welcomeBean.loginUserPassword}" styleClass="span2" /> 
+                                    <p:watermark for="loginUserPassword" value="密码" />
+                                    <p:commandButton styleClass="span1 btn btn-primary" value="登陆" action="#{welcomeBean.doLogin}" onclick="PrimeFaces.cleanWatermarks()" oncomplete="PrimeFaces.showWatermarks()" /><br />
+
+                              </div> 
+                              <!--<p:selectBooleanCheckbox styleClass="checkbox" value="" />  
+                                <h:outputText value=" Remember me" ></h:outputText>
+                                <br />-->
+                                <h:outputLink value="#">
+                                    <h:outputText value="Forget your password?" />
+                                </h:outputLink> 
+                            </h:form>
+                           
+                        </div>
+                        
+                           
+                        <div class="hero-unit">
+                            <div class="text-left">刚刚来到MOMA？</div>
+                            <h:form>
+                               
+                                <p:inputText id="newUserName" value="#{welcomeBean.user.userName}" required="true" />
+                                <p:watermark for="newUserName" value="用户名" />
+                                <br/>
+                                
+                                <p:autoComplete id ="newUserEmail" value="#{welcomeBean.user.userEmail}" effect="fade"
+                                            completeMethod="#{autoCompleteBean.complete}"/>
+                                <p:watermark for="newUserEmail" value="邮箱" />
+                                <br/>
+
+                                <p:password id="newUserPassword" value="#{welcomeBean.user.userPassword}" match="newUserPasswordConfirm" feedback="true" inline="true" required="true"/>
+                                <p:watermark for="newUserPassword" value="密码" />
+                                <br/>
+                               
+                                <p:password id="newUserPasswordConfirm" feedback="true" inline="true" required="true"/>                         
+                                <p:watermark for="newUserPasswordConfirm" value="确认密码" />
+                                <br />  
+
+<<<<<<< HEAD
+                                <p:commandButton styleClass="btn btn-primary" value="注册" actionListener="#{welcomeBean.doRegistration}" onclick="PrimeFaces.cleanWatermarks()" oncomplete="PrimeFaces.showWatermarks()" />
+=======
+                                <p:commandButton styleClass="btn btn-primary" value="注册" action="#{welcomeBean.doRegistration}" />
+>>>>>>> origin/elena
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="bootstrap.js"></script>
+        </h:body>
+    </f:view>
+</html>
+

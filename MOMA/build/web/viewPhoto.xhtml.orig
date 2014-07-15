@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>MOMA-Photo-</title>
+<<<<<<< HEAD
+    </h:head>
+    <h:body>
+        <h:form>
+=======
+         <link rel="stylesheet" type="text/css" href="./css/generalStyle.css" media="all" />
+        <style type="text/css">
+             .accordion-toggle{
+                background-color: #F3F3F3;
+                opacity: 0.6;
+            }
+            .editer{
+                display: block;
+                font-family: Georgia;
+                color: #0057CC;       
+                margin-left: 10%;
+            }
+            .loginPage {
+                background-color:#ffffff;
+                background-image:url(img/bg.jpg);
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".overEnlargeBtn").click(function() {
+                    $(".overEnlargeTarget").animate({height: "300px", width: "300px", opacity: '0.4'}, "slow");
+                });
+            });
+        </script>
+    </h:head>
+    <h:body styleClass="loginPage">
+         <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <h:outputLink styleClass="brand" value="#">
+                        <h:outputText value="MOMA" />
+                    </h:outputLink>
+                    <ul class="nav">
+                        <li><h:outputLink value="#">
+                                <h:outputText value="首页" />
+                            </h:outputLink>
+                        </li>
+                        <li class="active">
+                            <h:outputLink value="#">
+                                <h:outputText value="我的纪念册" />
+                            </h:outputLink>
+                        </li>
+                        <li>
+                            <h:outputLink value="Friends.xhtml">
+                                <h:outputText value="我的好友" />
+                            </h:outputLink>
+                        </li>
+
+                    </ul>
+
+                    <h:form styleClass="navbar-search pull-right" >
+
+                        <p:inputText id="search" label="search" styleClass="search-query" value="#{searchBean.searchName}" />
+                        <p:watermark for="search" value="找朋友、找同事、找家人" />
+
+                    </h:form>
+                    <ul class="nav pull-right ">
+                        <li>
+                            <h:outputLink value="#">
+                                <h:outputText value="搜索好友/纪念册" />
+                            </h:outputLink>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <h:form >
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+            <p:messages/>
+            <div class="jiathis_share_slide jiathis_share_32x32" id="jiathis_share_slide">
+                <div class="jiathis_share_slide_top" id="jiathis_share_title"></div>
+                <div class="jiathis_share_slide_inner">
+                    <div class="jiathis_style_32x32">
+                        <a class="jiathis_button_qzone"></a>
+                        <a class="jiathis_button_tsina"></a>
+                        <a class="jiathis_button_tqq"></a>
+                        <a class="jiathis_button_weixin"></a>
+                        <a class="jiathis_button_renren"></a>
+                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                        <script type="text/javascript">
+                            var jiathis_config = {
+                                slide: {
+                                    divid: 'jiathis_main',
+                                    pos: 'right'
+                                }
+                            };
+                        </script>
+                        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>	
+                        <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_slide.js" charset="utf-8"></script>
+                    </div></div></div>
+            <!-- JiaThis Button END -->
+            <!-- JiaThis Button BEGIN -->
+<<<<<<< HEAD
+
+            <p:dock position="top">  
+                <p:menuitem value="Home" icon="/img/brochureIcon/home.png" url="userHomePage.xhtml"/>  
+                <p:menuitem value="Diary" icon="/img/brochureIcon/diary.png" url="diaryList.xhtml"/>  
+                <p:menuitem value="Video" icon="/img/brochureIcon/video.png" url="videoList.xhtml"/>  
+                <p:menuitem value="Photo" icon="/img/brochureIcon/photo.png" url="viewPhoto.xhtml"/>    
+            </p:dock>
+            <p:panel style="display:inline-block;width:60%; position:relative;left: 20%; top: 70px;">
+                <h:outputText value="MOMA-#{viewPhotoBean.brochure.brochureName}-查看相册" style="font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+                              font-size: 20px;
+                              line-height: 20px;
+                              position: relative;
+                              font-weight: 500;
+                              color: rgba(26,89,120,0.9);
+                              text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+                              padding: 0px 0px 5px 0px;"/>
+                <p:commandButton id="upLoadPhoto" value="上传新照片" onclick="dlg.show();" type="button" style="position: relative;left: 55%;"/>
+                <br/>
+                <p:dialog id="upLoad" header="上传新照片" widgetVar="dlg" modal="true" height="200">  
+                    <h:form enctype="multipart/form-data">
+                        <br/><br/>
+                        <p:fileUpload fileUploadListener="#{viewPhotoBean.handleFileUpload}"  
+                                      mode="advanced"   
+                                      update="messages"  
+                                      sizeLimit="10000000"   
+                                      allowTypes="/(\.|\/)(gif|jpe?g|png)$/" 
+                                      />  
+                        <!--description="Select Images"-->
+
+=======
+
+            <p:dock position="top">  
+                <p:menuitem value="Home" icon="/img/brochureIcon/home.png" url="userHomePage.xhtml"/>  
+                <p:menuitem value="Diary" icon="/img/brochureIcon/diary.png" url="diaryList.xhtml"/>  
+                <p:menuitem value="Video" icon="/img/brochureIcon/video.png" url="videoList.xhtml"/>  
+                <p:menuitem value="Photo" icon="/img/brochureIcon/photo.png" url="viewPhoto.xhtml"/>    
+            </p:dock>
+            <p:panel style="display:inline-block;width:60%; position:relative;left: 20%; top: 70px;">
+                <h:outputText value="MOMA-#{viewPhotoBean.brochureName}-查看相册" style="font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+                              font-size: 20px;
+                              line-height: 20px;
+                              position: relative;
+                              font-weight: 500;
+                              color: rgba(26,89,120,0.9);
+                              text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+                              padding: 0px 0px 5px 0px;"/>
+                <p:commandButton id="upLoadPhoto" value="上传新照片" onclick="dlg.show();" type="button" style="position: relative;left: 55%;"/>
+                <br/>
+                <p:dialog id="upLoad" header="上传新照片" widgetVar="dlg" modal="true" height="200">  
+                    <h:form enctype="multipart/form-data">
+                        <br/><br/>
+                        <p:fileUpload fileUploadListener="#{viewPhotoBean.handleFileUpload}"  
+                                      mode="advanced"   
+                                      update="messages"  
+                                      sizeLimit="1000000"   
+                                      allowTypes="/(\.|\/)(gif|jpe?g|png)$/" oncomplete="dlg.hide()"/>  
+
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+                        <p:growl id="messages" showDetail="true"/> 
+                    </h:form> 
+                </p:dialog>
+                <p:galleria value="#{viewPhotoBean.images}" var="image" effect="slide" 
+                            panelWidth="500" panelHeight="313">
+                    <p:graphicImage value="#{image.photoUrl}" alt="alt" title="#{image.photoTitle}"/>  
+                </p:galleria>  
+                <br/>
+                <h:panelGrid columns="3">  
+                    <p:inputTextarea rows="4" cols="60" value="#{viewPhotoBean.photo_comment}"/> 
+                    <p:commandButton type="button" value="评论" title="Icon Only"/>    
+                </h:panelGrid>
+                <br/>   
+<<<<<<< HEAD
+=======
+
+>>>>>>> b246f48814c3b86d896c9c1d6f76ac8273288e62
+            </p:panel>
+        </h:form>
+        <!-- UJian Button BEGIN -->
+        <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&amp;fade=1&amp;uid=1799823"></script>
+        <a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+        <!-- UJian Button END -->
+    </h:body>
+</html>
+

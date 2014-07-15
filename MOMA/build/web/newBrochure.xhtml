@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Create a new brochure</title>
+        <style type="text/css">
+
+            .loginPage {
+                background-color:#ffffff;
+                background-image:url(img/bg.jpg);
+            }
+        </style>
+
+    </h:head>
+    <h:body styleClass="loginPage">
+         <h:outputText value="New Brochure" style="font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+                              font-size: 35px;
+                              line-height: 35px;
+                              position: relative;
+                              font-weight: 400;
+                              color: rgba(26,89,120,0.9);
+                              text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+                              padding: 0px 0px 5px 0px;
+                               position:relative;left: 20%; top: 30px"  />
+         <br/>
+        <p:panel style="display:inline-block; alignment-baseline: central; width: 60%; height: 400px; position:relative;left: 20%; top: 70px;">
+            <h:form>
+                <h:panelGrid columns="2" style="margin-bottom:20px" cellpadding="10">
+                    <p:outputLabel value="Brochure Name" for="brochureName"></p:outputLabel>
+                    <p:inputText id="brochureName" value="#{brochureBean.brochureName}"></p:inputText>
+                    <p:outputLabel value="Brochure Description" for="brochureDescription"></p:outputLabel>
+                    <p:inputTextarea id="brochureDescription" value="#{brochureBean.brochureDescription}" rows="3"></p:inputTextarea>
+                    <p:outputLabel value="Brochure Root" for="brochureRoot"></p:outputLabel>
+                    <p:selectOneMenu id="brochureRoot" value="#{brochureBean.brochureRoot}">  
+                        <f:selectItem itemLabel="只限纪念册所有者浏览" itemValue="1" />
+                        <f:selectItem itemLabel="只限纪念册所有者好友浏览" itemValue="2" />
+                        <f:selectItem itemLabel="公开所有人都可以浏览" itemValue="3" />
+                    </p:selectOneMenu>  
+                    
+                </h:panelGrid>
+
+                <p:separator style="margin-bottom:10px"/>  
+                <p:commandButton value="创建" action="#{brochureBean.newBrochure}" oncomplete="dlg.show()"></p:commandButton>
+                <p:commandButton value="取消" action="#{brochureBean.back}"></p:commandButton>
+                <p:dialog header="Brochure 信息确认" modal="true" showEffect="fade" hideEffect="fade" widgetVar="dlg" resizable="false">
+                    <h:panelGrid columns="1">
+                        <h:outputText value="Name: #{brochureBean.brochureName}"/>
+                        <h:outputText value="Brochure Description:#{brochureBean.brochureDescription}"/>
+                        <h:outputText value="Brochure Root:#{brochureBean.brochureRoot}"/>
+                        <h:outputText value="Brochure Member(s):"/>
+                    </h:panelGrid>
+
+                </p:dialog>  
+            </h:form>
+        </p:panel>
+
+    </h:body>
+</html>
+

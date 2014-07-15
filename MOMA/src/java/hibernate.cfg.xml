@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/moma_db?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">bianshujun</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="com/entity/moma/Comment.hbm.xml"/>
+    <mapping resource="com/entity/moma/Blessing.hbm.xml"/>
+    <mapping resource="com/entity/moma/Photo.hbm.xml"/>
+    <mapping resource="com/entity/moma/Brochure.hbm.xml"/>
+    <mapping resource="com/entity/moma/Video.hbm.xml"/>
+    <mapping class="" file="" jar="" package="" resource="com/entity/moma/User.hbm.xml"/>
+    <mapping resource="com/entity/moma/Diary.hbm.xml"/>
+    <mapping resource="com/entity/moma/GroupOwner.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
